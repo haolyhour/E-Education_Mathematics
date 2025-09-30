@@ -3,65 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Education Mathematics</title>
+    <title>E-Education Mathematics | Your Learning Journey Begins Here</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #0056b3;
+            --text-color: #f8f9fa;
+            --overlay-color: rgba(0, 0, 0, 0.6); /* Darker overlay for text contrast */
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            overflow: hidden; /* Prevent scrollbars if content overflows */
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0056b3;
+
+        .cover-page {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            background: url('https://via.placeholder.com/1920x1080/007bff/FFFFFF?text=Mathematics+Background') no-repeat center center/cover; /* Placeholder image */
+            /* You can replace the above URL with your own image, e.g.: */
+            /* background: url('your-math-background-image.jpg') no-repeat center center/cover; */
         }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-color);
+            z-index: 1; /* Ensure overlay is above background but below content */
+        }
+
+        .content {
+            position: relative;
+            z-index: 2; /* Ensure content is above the overlay */
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em; /* Larger for impact */
+            margin-bottom: 0.2em;
+            color: var(--text-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
         p {
-            margin-bottom: 1em;
+            font-size: 1.3em;
+            margin-bottom: 1.5em;
+            line-height: 1.5;
+            color: var(--text-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         }
+
         .button {
             display: inline-block;
-            background-color: #007bff;
+            background-color: var(--primary-color);
             color: white;
-            padding: 10px 15px;
+            padding: 15px 30px;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 20px;
-            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
+
         .button:hover {
-            background-color: #0056b3;
+            background-color: var(--secondary-color);
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to E-Education Mathematics!</h1>
-        <p>This is a placeholder for your educational mathematics content. Here you can share resources, tutorials, problem sets, and more.</p>
-        <p>GitHub Pages allows you to host your static website directly from your GitHub repository, completely free!</p>
-        <p>To get started, simply customize this <code>index.html</code> file or add other HTML, CSS, and JavaScript files to build out your site.</p>
-        
-        <h2>How to enable GitHub Pages:</h2>
-        <ol>
-            <li>Go to your repository on GitHub.com.</li>
-            <li>Click on the "Settings" tab.</li>
-            <li>In the left sidebar, click on "Pages".</li>
-            <li>Under "Build and deployment", select "Deploy from a branch".</li>
-            <li>Choose your branch (e.g., <code>main</code>) and select the folder (e.g., <code>/(root)</code> or <code>/docs</code> if you use that).</li>
-            <li>Click "Save".</li>
-        </ol>
-        <p>Your site should be live at a URL like <code>yourusername.github.io/your-repo-name/</code> within a few minutes.</p>
-        
-        <a href="https://github.com/your-username/E-Education_Mathematics" class="button">Visit our GitHub Repository</a>
+    <div class="cover-page">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>E-Education Mathematics</h1>
+            <p>Unlock the world of numbers and logic. Your comprehensive guide to mastering mathematical concepts from basic to advanced levels.</p>
+            <a href="main-content.html" class="button">Start Learning Now!</a>
+        </div>
     </div>
 </body>
 </html>
